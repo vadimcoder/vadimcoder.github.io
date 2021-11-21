@@ -2,64 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blog about technology, css, javascript, frontend" />
     <title>Vadim's Blog</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/main.css">
   </head>
 
   <body>
     <header class="header">
-      <img class="header__avatar" src="avatar.png" alt="Vadim Vinogradov the author of this blog" />
+      <img class="header__avatar" src="/interface-images/avatar.png" alt="Vadim Vinogradov the author of this blog" />
 
-      <div>
-        <span class="header__bio">Vadim Vinogradov, frontend developer</span>
-      
-        <a class="header__upwork-icon" href="https://www.upwork.com/freelancers/~01476f39a52d436e39" target="_blank">
-          <img src="favicon.ico" alt="Contact me on Upwork" width="30" />
-        </a>
-      </div>
+      <span class="header__bio">Vadim Vinogradov, frontend developer</span>
     </header>
 
 
-    <main class="articles">
-      <a href="sadfsdf">
-      <article class="article">
-        <h2>
-          Boot from USB flash drive in VirtualBox MacOS 
-        </h2>
+    <main class="posts">
+      <article class="posts-item">
+        <a class="posts-item__header-link" href="/blog/boot-from-usb-flash-drive-in-virtualbox-macos/">
+          <h2 class="posts-item__header">
+            Boot from USB flash drive in VirtualBox MacOS 
+          </h2>
+        </a>
 
-        <div class="article__description">
-          Imagine you have a bootable flash drive and you want to test it (try to boot from it).
-          For example we will boot from Windows 11 bootable USB flash drive. I will show you how to do this
-          under MacOS using VirtualBox.
-      </div>
-      </article>
-      </a>
-
-      <article class="article">
-        <h2>
-          Boot from USB flash drive in VirtualBox MacOS 
-        </h2>
-
-        <div class="article__description">
-          Imagine you have a bootable flash drive and you want to test it (try to boot from it).
-          For example we will boot from Windows 11 bootable USB flash drive. I will show you how to do this
-          under MacOS using VirtualBox.
-      </div>
+        <a class="posts-item__description-link" href="/blog/boot-from-usb-flash-drive-in-virtualbox-macos/">
+          <div class="posts-item__description">
+            Imagine you have a bootable flash drive and you want to test it (try to boot from it).
+            For example, we will boot from Windows 11 bootable USB flash drive. I will show you how to do this
+            under MacOS using VirtualBox.
+          </div>
+        </a>
       </article>
 
-
-      <article class="article">
-        <h2>
-          Boot from USB flash drive in VirtualBox MacOS 
-        </h2>
-
-        <div class="article__description">
-          Imagine you have a bootable flash drive and you want to test it (try to boot from it).
-          For example we will boot from Windows 11 bootable USB flash drive. I will show you how to do this
-          under MacOS using VirtualBox.
-      </div>
-      </article>
+      <!-- <article>...</article> -->
     </main>
-    
+
+    <div class="under-construction">under construction...</div>
+
+    <footer>
+      <a class="contact-me" href="https://www.upwork.com/freelancers/~01476f39a52d436e39" target="_blank" rel="noopener" rel="noreferrer">
+        Contact me<img class="contact-me__icon" src="/interface-images/upwork.ico" alt="Contact me on Upwork" width="25" /></a>
+
+        <span class="flaticon-attribution">
+          Uicons by <a href="https://www.flaticon.com/uicons" target="_blank" rel="noopener" rel="noreferrer">Flaticon</a>
+        </span>
+    </footer>
   </body>
   </html>

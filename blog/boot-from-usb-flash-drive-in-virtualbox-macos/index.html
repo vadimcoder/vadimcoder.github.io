@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How to boot from USB drive in VirtualBox" />
+    <title>Vadim's Blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="/lib/prims/prism.css" />
+  </head>
+
+  <body>
+    <a href="/" title="Back" class="back-arrow">
+      <i class="fi fi-rr-arrow-left"></i>
+    </a>
+
+    <main>
+      <article class="post">
+        <h1>Boot from USB flash drive in VirtualBox MacOS</h1>
+
+        <p>
+          Imagine you have a bootable flash drive and you want to test it (try to boot from it).
+          For example, we will boot from Windows 11 bootable USB flash drive.
+          I will show you how to do this under MacOS using VirtualBox.
+        </p>
+
+        <h2 class="post-h2">Step 0: plug in USB drive</h2>
+        We need a <code class="language-none">/dev/disk&lt;number&gt;</code> file related to our drive.
+        But MacOS will also automatically mount any USB drive to /Volumes/ folder. We don't want that.
+        The USB drive shouldn't be mounted. You could eject the drive in Finder but it also deletes the
+        <code class="language-none">/dev/disk&lt;number&gt;</code> file.
+        Thus we need some third-party app that prevents USB drives from mounting.
+        We will use an open-source app called <a href="https://github.com/aburgh/Disk-Arbitrator">Disk Arbitrator (Github)</a>.
+        We open the app and plug-in our drive:
+
+        <img class="post-image" src="disk-arbitrator.png" alt="Disk Arbitrator app screenshot" />
+
+        On this screenshot we see the mode ("Block mounts") and the dev file (<code class="language-none">/dev/disk&lt;number&gt;</code>).
+
+
+        <h2 class="post-h2">Step 1: create VDMK linked to /dev/disk&lt;number&gt;</h2>
+
+        <p>     
+          VirtualBox doesn't provide the ability to use a USB drive explicitly for booting.
+          Instead, we will create a VDMK image which will be linked to the dev file of our USB 
+          drive <code class="language-none">/dev/disk&lt;number&gt;</code>:
+        </p>
+
+        <pre><code class="language-none">
+          sudo VBoxManage internalcommands createrawvmdk -filename ./usb.vmdk -rawdisk /dev/disk&lt;number&gt;
+        </code></pre>
+
+
+        And this is very important:
+
+        <pre><code class="language-none">
+          sudo chmod 777 ./usb.vmdk
+          sudo chmod 777 /dev/disk2
+        </code></pre>
+
+
+        <h2 class="post-h2">Step 2: Create a virtual machine</h2>
+        <p>
+          Now we need to create a virtual machine and use this VDMK image:
+        </p>
+
+        <img class="post-image" src="create-virtual-machine.png" alt="Create a virtual machine interface screenshot" />
+        
+        Start our virtual machine:
+
+        <img class="post-image" src="virtual-machine-started.png" alt="virtual machine started" />
+      </article>
+    </main>
+
+    <footer>
+      <a class="contact-me" href="https://www.upwork.com/freelancers/~01476f39a52d436e39" target="_blank" rel="noopener" rel="noreferrer">
+        Contact me<img class="contact-me__icon" src="/interface-images/upwork.ico" alt="Contact me on Upwork" width="25" /></a>
+
+        <span class="flaticon-attribution">
+          Uicons by <a href="https://www.flaticon.com/uicons" target="_blank" rel="noopener" rel="noreferrer">Flaticon</a>
+        </span>
+    </footer>
+
+    <script src="/lib/prims/prism.js"></script>
+  </body>
+  </html>
