@@ -39,11 +39,11 @@
         On this screenshot we see the mode ("Block mounts") and the dev file (<code class="language-none">/dev/disk&lt;number&gt;</code>).
 
 
-        <h2 class="post-h2">Step 1: create VDMK linked to /dev/disk&lt;number&gt;</h2>
+        <h2 class="post-h2">Step 1: create VMDK linked to /dev/disk&lt;number&gt;</h2>
 
         <p>     
           VirtualBox doesn't provide the ability to use a USB drive explicitly for booting.
-          Instead, we will create a VDMK image which will be linked to the dev file of our USB 
+          Instead, we will create a VMDK image which will be linked to the dev file of our USB 
           drive <code class="language-none">/dev/disk&lt;number&gt;</code>:
         </p>
 
@@ -62,7 +62,7 @@
 
         <h2 class="post-h2">Step 2: Create a virtual machine</h2>
         <p>
-          Now we need to create a virtual machine and use this VDMK image:
+          Now we need to create a virtual machine and use this VMDK image:
         </p>
 
         <img class="post-image" src="create-virtual-machine.png" alt="Create a virtual machine interface screenshot" />
