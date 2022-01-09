@@ -1,5 +1,23 @@
+@keyframes header-animation {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
 html {
   font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 h1 {
@@ -17,11 +35,20 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(235deg, rgba(28,117,188,0.7) 0, rgba(238,42,123,0.7));
+  padding: 10px 0 15px 0;
+  background-size: 200% 200%;
+  animation: header-animation 5s ease infinite;
 }
 
 .header__avatar {
   width: 200px;
   margin-bottom: 10px;
+}
+
+.header__bio {
+  color: white;
+  font-size: 18px;
 }
 
 .posts {
@@ -69,4 +96,10 @@ header {
   font-size: 36px;
   text-decoration: none;
   color: inherit;
+}
+
+@media (prefers-reduced-motion) {
+    header {
+        animation: none;
+    }
 }
