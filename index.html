@@ -10,47 +10,52 @@
   </head>
 
   <body>
-    <header>
+    <div class="rtl-container-for-chrome">
+      <header>
+        <picture>
+          <source srcset="/interface-images/avatar.avif" type="image/avif">
+          <source srcset="/interface-images/avatar.webp" type="image/webp">
+          <img class="header__avatar" src="/interface-images/avatar.png" alt="Vadim Vinogradov the author of this blog" />
+        </picture>
 
-      <picture>
-        <source srcset="/interface-images/avatar.avif" type="image/avif">
-        <source srcset="/interface-images/avatar.webp" type="image/webp">
-        <img class="header__avatar" src="/interface-images/avatar.png" alt="Vadim Vinogradov the author of this blog" />
-      </picture>
-
-      <span class="header__bio">Vadim Vinogradov, frontend developer</span>
-    </header>
+        <div class="header__bio">
+          <p class="header__line-one">Vadim Vinogradov</p>
+          <p class="header__line-two">frontend developer</p>
+          <p class="header__line-three">👋</p>
+        </div>
+      </header>
 
 
-    <main class="posts">
-      <article class="posts-item">
-        <a class="posts-item__header-link" href="/blog/boot-from-usb-flash-drive-in-virtualbox-macos/">
-          <h2 class="posts-item__header">
-            Boot from USB flash drive in VirtualBox MacOS
-          </h2>
-        </a>
+      <main class="posts">
+        <article class="posts-item">
+          <a class="posts-item__header-link" href="/blog/boot-from-usb-flash-drive-in-virtualbox-macos/">
+            <h2 class="posts-item__header">
+              Boot from USB flash drive in VirtualBox MacOS
+            </h2>
+          </a>
 
-        <a class="posts-item__description-link" href="/blog/boot-from-usb-flash-drive-in-virtualbox-macos/">
-          <div class="posts-item__description">
-            Imagine you have a bootable flash drive and you want to test it (try to boot from it).
-            For example, we will boot from Windows 11 bootable USB flash drive. I will show you how to do this
-            under MacOS using VirtualBox.
-          </div>
-        </a>
-      </article>
+          <a class="posts-item__description-link" href="/blog/boot-from-usb-flash-drive-in-virtualbox-macos/">
+            <div class="posts-item__description">
+              Imagine you have a bootable flash drive and you want to test it (try to boot from it).
+              For example, we will boot from Windows 11 bootable USB flash drive. I will show you how to do this
+              under MacOS using VirtualBox.
+            </div>
+          </a>
+        </article>
 
-      <!-- <article>...</article> -->
-    </main>
+        <!-- <article>...</article> -->
+      </main>
 
-    <div class="under-construction">under construction...</div>
+      <div class="under-construction">under construction...</div>
 
-    <footer>
-      <a class="contact-me" href="https://www.upwork.com/freelancers/~01476f39a52d436e39" target="_blank" rel="noopener noreferrer">
-        Contact me<img class="contact-me__icon" src="/interface-images/upwork.ico" alt="Contact me on Upwork" width="25" /></a>
+      <footer>
+        <a class="contact-me" href="https://www.upwork.com/freelancers/~01476f39a52d436e39" target="_blank" rel="noopener noreferrer">
+          Contact me<img class="contact-me__icon" src="/interface-images/upwork.ico" alt="Contact me on Upwork" width="25" /></a>
 
-        <span class="flaticon-attribution">
-          Uicons by <a href="https://www.flaticon.com/uicons" target="_blank" rel="noopener noreferrer">Flaticon</a>
-        </span>
-    </footer>
+          <span class="flaticon-attribution">
+            Uicons by <a href="https://www.flaticon.com/uicons" target="_blank" rel="noopener noreferrer">Flaticon</a>
+          </span>
+      </footer>
+    </div>
   </body>
   </html>
