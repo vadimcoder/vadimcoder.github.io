@@ -1,0 +1,9 @@
+Difference between .innerText and .textContent
+
+element.innerText действует так же как textContent если element находится внутри display: none.
+
+element.innerText не включает текст дочерних элементов - если они display: none.
+
+когда в блоге появится больше статей, написать коммент тут https://github.com/puppeteer/puppeteer/issues/825:
+
+Что типа Let me clarify this for future readers: innerText when in display: none works like text.Content и ссылку на статью в моем блоге
