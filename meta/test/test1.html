@@ -21,11 +21,13 @@
   </head>
 
   <body>
-
-    <script type="module">
-      const response = await fetch("https://api.github.com/users/defunkt").then(response => response.json());
-
-      console.log(response);
+    <button onclick="test1()">button1</button>
+    <script>
+      function test1() {
+        gtag('event', 'any_event_name', {'d1': 123});
+      }
     </script>
+
+
   </body>
 </html>
