@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8">
     <title>Experiment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 
-<body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91R74M5HBB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-  <script type="module">
-    const response = await fetch("https://api.github.com/users/defunkt").then(response => response.json());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-    console.log(response);
-  </script>
-</body>
+      gtag('js', new Date());
+
+      gtag('config', 'G-91R74M5HBB');
+    </script>
+  </head>
+
+  <body>
+
+    <script type="module">
+      const response = await fetch("https://api.github.com/users/defunkt").then(response => response.json());
+
+      console.log(response);
+    </script>
+  </body>
 </html>
