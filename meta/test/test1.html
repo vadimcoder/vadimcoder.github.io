@@ -22,9 +22,16 @@
 
   <body>
     <button onclick="test1()">button1</button>
+    <button onclick="test2()">button2</button>
     <script>
       function test1() {
         gtag('event', 'any_event_name', {'d1': 123});
+        console.log("test1");
+      }
+
+      function test2() {
+        gtag('event', 'd1', {'parameter1': 456});
+        console.log("test2");
       }
     </script>
 
