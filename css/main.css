@@ -34,13 +34,6 @@ body {
   margin: 0;
 }
 
-footer {
-  border-top: 1px solid #ccc;
-  font-size: 70%;
-  text-align: center;
-  padding-top: 20px;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -76,11 +69,15 @@ header {
   max-width: var(--max-width);
 
   --margin-left-right: auto;
-  margin: 80px var(--margin-left-right) 0;
+  margin: 50px var(--margin-left-right) 0;
 }
 
 .posts-item:not(:last-child) {
   margin-bottom: 80px;
+}
+
+.posts-item__header {
+  margin: 0;
 }
 
 .posts-item__description-link {
@@ -88,9 +85,9 @@ header {
   text-decoration: none;
 }
 
-.under-construction {
-  text-align: center;
-  margin: 100px 0 600px;
+time {
+  color: #8b8b8b;
+  font-size: 80%;
 }
 
 .contact-me__icon {
@@ -140,4 +137,12 @@ header {
     --max-width: none;
     --margin-left-right: 10px;
   }
+}
+
+footer {
+  margin-block-start: 300px;
+  border-top: 1px solid #ccc;
+  font-size: 70%;
+  text-align: center;
+  padding-top: 20px;
 }
