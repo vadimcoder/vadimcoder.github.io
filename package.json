@@ -1,8 +1,12 @@
 {
+  "name": "vadimcoder.github.io",
+  "version": "1.0.0",
+  "description": "Personal website of Vadim Vinogradov",
+  "private": true,
   "devDependencies": {
-    "browser-sync": "^2.27.7"
+    "browser-sync": "^3.0.4"
   },
   "scripts": {
-    "start": "browser-sync start --config /data/tools/browser-sync-www/browser-sync.other.config.js"
+    "start": "browser-sync start --server --directory --no-ui --no-notify --no-inject-changes --no-open --ignore node_modules --files '**/*.html' '**/*.css'"
   }
 }

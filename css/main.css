@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -24,7 +26,7 @@ html {
   line-height: 1.5;
 }
 
-@supports(font-size: clamp(0px, 0vw, 0px)) {
+@supports (font-size: clamp(0px, 0vw, 0px)) {
   html {
     font-size: clamp(18px, 1vw, 22px);
   }
@@ -37,7 +39,11 @@ body {
 header {
   display: flex;
   align-items: center;
-  background: linear-gradient(235deg, rgba(28,117,188,0.7) 0, rgba(238,42,123,0.7));
+  background: linear-gradient(
+    235deg,
+    rgba(28, 117, 188, 0.7) 0,
+    rgba(238, 42, 123, 0.7)
+  );
   background-size: 200% 200%;
   animation: header-animation 5s ease infinite;
   padding-block: 10px 15px;
@@ -52,7 +58,9 @@ header {
   color: white;
 }
 
-.header__line-one, .header__line-two, .header__line-three {
+.header__line-one,
+.header__line-two,
+.header__line-three {
   margin: 0;
 }
 
@@ -119,9 +127,9 @@ time {
 }
 
 @media (prefers-reduced-motion) {
-    header {
-        animation: none;
-    }
+  header {
+    animation: none;
+  }
 }
 
 @media screen and (max-width: 400px) {
