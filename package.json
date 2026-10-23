@@ -1,12 +1,16 @@
 {
   "name": "vadimcoder.github.io",
-  "version": "1.1.0",
-  "description": "Personal website of Vadim Vinogradov",
   "private": true,
-  "devDependencies": {
-    "browser-sync": "^3.0.4"
-  },
   "scripts": {
-    "start": "browser-sync start --server --directory --no-ui --no-notify --no-inject-changes --no-open --ignore node_modules --files '**/*.html' '**/*.css'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "stylelint '**/*.css' && prettier . --write"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard": "^40.0.0",
+    "vite": "^8.3.5"
   }
 }

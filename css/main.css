@@ -34,6 +34,7 @@ html {
 
 body {
   margin: 0;
+  background-color: repeating-linear-gradient(90deg, transparent, transparent 10px, #f8f8f8 10px, #f8f8f8 20px);
 }
 
 header {
