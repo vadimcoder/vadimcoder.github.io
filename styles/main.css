@@ -52,7 +52,7 @@ header {
   background-size: 200% 200%;
   animation: header-animation 5s ease infinite;
   padding-block: 10px 80px;
-  border-radius: 0 3vw;
+  border-radius: 0 0 20px 20px;
 
   .avatar {
     width: 200px;
